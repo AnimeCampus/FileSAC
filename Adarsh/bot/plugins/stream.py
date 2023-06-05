@@ -15,7 +15,7 @@ from Adarsh.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
 
 
-MY_PASS = os.environ.get("MY_PASS", None)
+MY_PASS = os.environ.get("MY_PASS", "Nano")
 pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
@@ -67,7 +67,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="You are banned!\n\n  **Cᴏɴᴛᴀᴄᴛ Dᴇᴠᴇʟᴏᴘᴇʀ [Adarsh Goel](https://github.com/adarsh-goel) ʜᴇ Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
+                    text="You are banned!\n\n  **Cᴏɴᴛᴀᴄᴛ Dᴇᴠᴇʟᴏᴘᴇʀ [None](https://github.com/None) ʜᴇ Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
                     
                     disable_web_page_preview=True
                 )
@@ -90,7 +90,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** [Adarsh Goel](https://github.com/adarsh-goel)",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** [None](https://github.com/none)",
                 
                 disable_web_page_preview=True)
             return
